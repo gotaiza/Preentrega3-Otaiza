@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Carga de alumnos</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="switchBg">
+        <label for="themeSwitch" class="themeSwitch">☀️</label>
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch" />
+          <span class="slider round"></span>
+        </label>
+        <label for="themeSwitch" class="themeSwitch">🌙</label>
+      </div>
+    </div>
+    <h2>Carga de alumnos para el colegio</h2>
+
+    <form id="form">
+      <div class="inputContainer">
+        <!-- Name -->
+        <label for="name">Nombre y Apellido: </label>
+        <input type="text" name="name" id="name" placeholder="Roberto Perez" />
+        <!-- Subject -->
+        <label for="subject">Materia: </label>
+        <select name="subject" id="subject">
+          <option value="Matemática">Matemática</option>
+          <option value="Literatura">Literatura</option>
+          <option value="Programación">Programación</option>
+          <option value="Física">Física</option>
+          <option value="Química">Química</option>
+        </select>
+        <!-- Note -->
+        <label for="note">Nota: </label>
+        <input
+          type="number"
+          name="note"
+          id="note"
+          placeholder="1 a 10"
+          inputmode="decimal"
+        />
+      </div>
+      <input type="submit" id="addButton" value="Agregar"/>
+      <!-- Submit -->
+    </form>
+
+    <div id="contenedor">
+      <table class="small-screen-table">
+        <thead>
+          <tr>
+            <th>Alumno</th>
+            <th>Materia</th>
+            <th>Nota</th>
+          </tr>
+        </thead>
+        <tbody id="studentList">
+        </tbody>
+      </table>
+      <p id="addStudentNote">Cargue alumnos para poder mostrarlos en la tabla</p>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="switch.js"></script>
+  </body>
+</html>
